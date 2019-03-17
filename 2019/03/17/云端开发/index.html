@@ -266,7 +266,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">1.2k</span>阅读时长: <span class="post-count reading-time">4 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.7k</span>阅读时长: <span class="post-count reading-time">6 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -485,6 +485,35 @@ height:50vh;
 <p>view:处理视图函数的名称，或include()类</p>
 <p>处理函数和</p>
 <p>include()函数：路径去重，附加本地路由</p>
+<h2 id="云端留言板-1"><a href="#云端留言板-1" class="headerlink" title="云端留言板"></a>云端留言板</h2><p>开发流程</p>
+<p>1.新建工程cloudms</p>
+<p>2.新建应用 msgapp</p>
+<p>3.增加模板，即显示界面的前端代码，配置路径</p>
+<p>4.设定URL路由，本地路由和全局路由</p>
+<p>5.编写交互代码</p>
+<p>6.运行工程</p>
+<h2 id="进阶-1"><a href="#进阶-1" class="headerlink" title="进阶"></a>进阶</h2><h3 id="路由机制-1"><a href="#路由机制-1" class="headerlink" title="路由机制"></a>路由机制</h3><p>settings.py文件中ROOT_URLCONF变量指定全局路由文件名称</p>
+<p>urlpatterns变量表示路由(urls.py)，该变量是列表类型，由path()或re_path()作为元素组成</p>
+<p>path(route,view)字符串  路由 re_path处理正则表达式路由，第一个参数是正则表达式可看做字符串的模式</p>
+<p>route：URL或URL模式，URL转换语法</p>
+<p>精确字符串格式，</p>
+<p>转换格式，一个URL模板，匹配URL同时在其中获得一批变量作为参数&lt;类型:变量名&gt;</p>
+<p>正则表达式  </p>
+<p>一类URL</p>
+<p>view:处理视图函数的名称，或include()类</p>
+<p>处理函数和</p>
+<p>include()函数：路径去重，附加本地路由</p>
+<h4 id="url路由机制"><a href="#url路由机制" class="headerlink" title="url路由机制"></a>url路由机制</h4><p>查找全局urlpatterns变量(urls.py</p>
+<p>按照先后顺序，匹配</p>
+<p>根据匹配结果执行对语音处理函数</p>
+<p>如果没有找到，进行错误处理</p>
+<p>不考虑HTTP请求方式，根据URL进行路由，只要URL相同，无论是POST GET那种请求方式都指向同一个操作函数</p>
+<h4 id="URL根目录的处理"><a href="#URL根目录的处理" class="headerlink" title="URL根目录的处理"></a>URL根目录的处理</h4><p>path(‘ ‘,&lt;根目录处理函数&gt;),</p>
+<p>re.path(‘^$’,&lt;根目录处理函数&gt;) 或者，二选一</p>
+<h3 id="视图响应类型"><a href="#视图响应类型" class="headerlink" title="视图响应类型"></a>视图响应类型</h3><p>视图函数接受HTTP请求并返回响应，可以放在任何地方，可以是任何功能</p>
+<p>视图函数可以返回Web文本 页面 重定向 错误 图片等任何内容</p>
+<p>通过HttpResponse.JsonResponse等类表达并返回响应</p>
+<p>视图函数放在对应app中的views.py文件中</p>
 
     </article>
     <!-- license  -->
@@ -493,7 +522,7 @@ height:50vh;
             <p>作者：Darlene</p>
             <p>原文链接：https://github.com/Darlene0354/Darlene0354.github.io</p>
             <p>发表日期：<a href="http://yoursite.com/2019/03/17/云端开发/">March 17th 2019, 12:00:00 am</a>
-            </p><p>更新日期：<a href="http://yoursite.com/2019/03/17/云端开发/">March 17th 2019, 3:25:38 pm</a>
+            </p><p>更新日期：<a href="http://yoursite.com/2019/03/17/云端开发/">March 17th 2019, 3:26:03 pm</a>
             </p><p>版权声明：本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -625,7 +654,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS层叠样式表"><span class="toc-number">2.</span> <span class="toc-text">CSS层叠样式表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Javascript"><span class="toc-number">3.</span> <span class="toc-text">Javascript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP协议"><span class="toc-number">4.</span> <span class="toc-text">HTTP协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对url位置资源的操作"><span class="toc-number">4.1.</span> <span class="toc-text">对url位置资源的操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web服务器"><span class="toc-number">5.</span> <span class="toc-text">web服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#专注在那些能让你开心的事"><span class="toc-number">6.</span> <span class="toc-text">专注在那些能让你开心的事</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Django框架"><span class="toc-number"></span> <span class="toc-text">Django框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解"><span class="toc-number">1.</span> <span class="toc-text">理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#web框架"><span class="toc-number">1.1.</span> <span class="toc-text">web框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Django产品级框架，采用MTV模型组织"><span class="toc-number">1.2.</span> <span class="toc-text">Django产品级框架，采用MTV模型组织</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最小程序"><span class="toc-number">2.</span> <span class="toc-text">最小程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立web框架工程"><span class="toc-number">2.1.</span> <span class="toc-text">建立web框架工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#django-admin"><span class="toc-number">2.2.</span> <span class="toc-text">django-admin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改工程"><span class="toc-number">2.3.</span> <span class="toc-text">修改工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试运行"><span class="toc-number">2.4.</span> <span class="toc-text">调试运行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MTV开发模式-模型-视图-模板"><span class="toc-number">3.</span> <span class="toc-text">MTV开发模式 模型 视图 模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云端留言板"><span class="toc-number">4.</span> <span class="toc-text">云端留言板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进阶"><span class="toc-number">5.</span> <span class="toc-text">进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由机制"><span class="toc-number">5.1.</span> <span class="toc-text">路由机制</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS层叠样式表"><span class="toc-number">2.</span> <span class="toc-text">CSS层叠样式表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Javascript"><span class="toc-number">3.</span> <span class="toc-text">Javascript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP协议"><span class="toc-number">4.</span> <span class="toc-text">HTTP协议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对url位置资源的操作"><span class="toc-number">4.1.</span> <span class="toc-text">对url位置资源的操作</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#web服务器"><span class="toc-number">5.</span> <span class="toc-text">web服务器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#专注在那些能让你开心的事"><span class="toc-number">6.</span> <span class="toc-text">专注在那些能让你开心的事</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Django框架"><span class="toc-number"></span> <span class="toc-text">Django框架</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解"><span class="toc-number">1.</span> <span class="toc-text">理解</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#web框架"><span class="toc-number">1.1.</span> <span class="toc-text">web框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Django产品级框架，采用MTV模型组织"><span class="toc-number">1.2.</span> <span class="toc-text">Django产品级框架，采用MTV模型组织</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#最小程序"><span class="toc-number">2.</span> <span class="toc-text">最小程序</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#建立web框架工程"><span class="toc-number">2.1.</span> <span class="toc-text">建立web框架工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#django-admin"><span class="toc-number">2.2.</span> <span class="toc-text">django-admin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改工程"><span class="toc-number">2.3.</span> <span class="toc-text">修改工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#调试运行"><span class="toc-number">2.4.</span> <span class="toc-text">调试运行</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#MTV开发模式-模型-视图-模板"><span class="toc-number">3.</span> <span class="toc-text">MTV开发模式 模型 视图 模板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云端留言板"><span class="toc-number">4.</span> <span class="toc-text">云端留言板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进阶"><span class="toc-number">5.</span> <span class="toc-text">进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由机制"><span class="toc-number">5.1.</span> <span class="toc-text">路由机制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#云端留言板-1"><span class="toc-number">6.</span> <span class="toc-text">云端留言板</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进阶-1"><span class="toc-number">7.</span> <span class="toc-text">进阶</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#路由机制-1"><span class="toc-number">7.1.</span> <span class="toc-text">路由机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#url路由机制"><span class="toc-number">7.1.1.</span> <span class="toc-text">url路由机制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#URL根目录的处理"><span class="toc-number">7.1.2.</span> <span class="toc-text">URL根目录的处理</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#视图响应类型"><span class="toc-number">7.2.</span> <span class="toc-text">视图响应类型</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
